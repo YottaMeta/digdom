@@ -1,0 +1,30 @@
+# ---- 构建产物 ----
+/build/
+/dist/
+*.exe
+
+# ---- 前端依赖 ----
+frontend/node_modules/
+frontend/dist/
+
+# ---- 数据 / 运行产物 ----
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+/digdom.db
+/dic.txt
+/tmp/
+*.log
+
+# ---- 编辑器 / 系统 ----
+.idea/
+.vscode/
+*.suo
+*.user
+.DS_Store
+Thumbs.db
+
+# ---- 临时 ----
+*.tmp
+*~

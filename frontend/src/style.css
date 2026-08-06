@@ -1,0 +1,61 @@
+/* 主题：默认暗色（:root），亮色通过 html[data-theme="light"] 覆盖 */
+:root {
+    --bg: #121216;
+    --bg-elev: #1b1b22;
+    --fg: #e6e6eb;
+    --fg-muted: #9a9aa5;
+    --accent: #4f8cff;
+    --accent-soft: rgba(79, 140, 255, 0.16);
+    --border: #2a2a34;
+
+    /* 状态色（预留爆破打标用） */
+    --ok: #3fb950;
+    --warn: #d29922;
+    --unknown: #8b949e;
+
+    color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+    --bg: #f4f4f6;
+    --bg-elev: #ffffff;
+    --fg: #1b1b20;
+    --fg-muted: #6f6f7a;
+    --accent: #2f6fed;
+    --accent-soft: rgba(47, 111, 237, 0.14);
+    --border: #d9d9e0;
+
+    --ok: #1a7f37;
+    --warn: #9a6700;
+    --unknown: #59636e;
+
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
